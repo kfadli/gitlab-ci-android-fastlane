@@ -42,6 +42,7 @@ RUN ${ANDROID_HOME}/tools/bin/sdkmanager "tools" "platforms;android-${VERSION_TA
 RUN ${ANDROID_HOME}/tools/bin/sdkmanager "extras;android;m2repository" "extras;google;google_play_services" "extras;google;m2repository"
 
 RUN gem install fastlane
+RUN gem update fastlane
 
 ADD id_rsa $HOME/.ssh/id_rsa
 ADD id_rsa.pub $HOME/.ssh/id_rsa.pub
